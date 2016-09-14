@@ -1,0 +1,310 @@
+@font-face {
+  font-family: 'Orator';
+  src: url('../assets/fonts/OratorStd.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../assets/fonts/OratorStd.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+body {
+  font-family: 'Orator','Oxygen Mono', sans-serif;
+  padding: 0;
+  webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+.home-hero{
+  color:white;
+}
+
+.primary-text{
+  opacity: 0.87;
+}
+.secondary-text{
+  opacity: 0.64;
+}
+
+video#bgvid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(../assets/images/marathon-back.jpg) no-repeat;
+  background-size: contain;
+  background-position: bottom
+}
+
+@media screen and (max-device-width: 800px) {
+  html {
+    background: url(../assets/images/marathon-back.jpg) #000 no-repeat center center fixed;
+  }
+  h1{
+    font-size: 100px !important;
+  }
+  h2{
+    font-size: 13px !important;
+    margin-top:-30px !important;
+    padding-right:13px;
+  }
+  #bgvid {
+    display: none;
+  }
+  .menu{
+    display:block!important;
+    ul{
+      width:auto !important;
+      display:block !important;
+    }
+  }
+  .home-header-content{
+    margin-top:auto !important;
+  }
+}
+
+@media screen and (max-device-width: 500px) {
+  h1{
+    font-size: 60px !important;
+  }
+  h2{
+    margin-top: -20px !important;
+    font-size: 10px !important;
+    padding-right:7px !important;
+  }
+}
+
+.playVideoButton{
+  color:white;
+  cursor: pointer;
+}
+
+.header-content{
+  text-align:center;
+  color: white;
+  display:table;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:100px;
+  a{
+    color: white;
+    transition: all 0.3s;
+    border-bottom: solid 1px white;
+    text-decoration: none;
+    @extend .secondary-text;
+    &:hover{
+      font-size: 18px;
+      @extend .primary-text;
+    }
+  }
+  h1{
+    font-size: 150px;
+    font-weight: 100;
+    margin: 10px 10px;
+    @extend .primary-text;
+  }
+  h2{
+    @extend .primary-text;
+    margin:10px 10px;
+    font-size: 16px;
+    margin-top:-40px;
+    margin-bottom:30px;
+    text-transform: uppercase;
+    text-align:right;
+    padding-right:18px;
+  }
+  .trailer-play{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:25px;
+    @extend .primary-text;
+    span{
+      font-family: 'Open Sans Condensed', sans-serif;
+      display:flex;
+      padding-top:5px;
+      margin-left:-5px;
+      font-size:19px;
+    }
+    .fa{
+        transition: all 0.3s;
+        cursor: pointer;
+      &:before{
+        font-size: 65px;
+      }
+      &:hover{
+        transform: scale(1.1,1.1);
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+footer {
+  z-index: 200;  
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width:100%;
+  height:auto;
+  text-align: center;
+  padding-bottom: 15px;
+  a{
+    display: inline-block;
+    transition: all 0.3s;
+    @extend .secondary-text;
+    &:hover{
+      opacity: 1;
+      transform:scale(1.1,1.1);
+    }
+  }
+  .fa{
+    color:white;
+    font-size:25px;
+    padding: 5px;
+  }
+  .fa-cogs{
+    padding-left:10px;
+  }
+  .crowfunding{
+    color:white;
+    text-decoration: none;
+  }
+}
+
+.about footer {
+  position: relative;
+}
+
+#fancybox-loading, .fancybox-prev span, .fancybox-next span {
+  background-image: url("bower_components/fancyBox/source/fancybox_sprite@2x.png");
+}
+.fancybox-prev span, .fancybox-next span {
+  background-image: url("bower_components/fancyBox/source/fancybox_sprite@2x.png");
+}
+
+.menu{
+  z-index:999;
+  background:none;
+  display:flex;
+  width: 100%;
+  text-align:center;
+  padding-top: 15px;
+  ul{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    li + li {
+      margin-right: 15px;
+    }
+    li{
+      list-style-type:none;
+      flex:1;
+      padding-top:10px;
+      a{
+        text-shadow: 2px 2px 8px #000;
+        text-transform: uppercase;
+        color:white;
+        @extend .secondary-text;
+        text-decoration: none;
+        &:hover{
+          @extend .primary-text;
+        }
+        &.crowfunding{
+          -webkit-animation: blowing 2s linear infinite;
+          -moz-animation:    blowing 2s linear infinite;
+          -o-animation:      blowing 2s linear infinite;
+          animation:         blowing 2s linear infinite;
+        }
+      }
+    }
+  }
+}
+
+@keyframes blowing {
+  0% {margin-left:-15px;}
+  50% {margin-left:0px;}
+  100%{margin-left:-15px;}
+}
+
+@-webkit-keyframes blowing {
+  0% {margin-left:-15px;}
+  50% {margin-left:0px;}
+  100%{margin-left:-15px;}
+}
+
+/*about*/
+  html {
+    background: url(../assets/images/maori.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .about {
+    width: 100%;
+    height: 100%;
+
+    .center-content {
+      width: 500px;
+      margin: auto;
+      background-color: #000;
+      opacity: 0.8;
+      border-radius: 15px;
+      color: white;
+      padding: 15px;
+    }
+    
+/*    h1 { 
+      font-size: 100px !important;
+      color: #c9d0d4; font-family: 'Helvetica Neue', sans-serif;
+
+      font-weight: 700;
+      line-height: 50px;
+      letter-spacing: 1px;
+      padding: 0 0 40px;
+      position: relative;
+      top: 15%;
+    }*/
+
+/*    .clouds {
+      position: absolute;
+      bottom: -277px;
+      left: -150px;
+    }
+*/
+    #cloud-scroll {
+      z-index: 100;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      /*position: relative;*/
+      /*bottom: -150px;*/
+      /*left: -150px;*/
+      width: 100%;
+      height: 400px;
+      background: url(../assets/images/cloud2.png) repeat-y;
+      -webkit-animation: backgroundScroll 20s linear infinite;
+      animation: backgroundScroll 20s linear infinite;
+    }
+       
+    @-webkit-keyframes backgroundScroll {
+      from {
+        background-position: 0 0;
+      }
+      to {
+        background-position: -400px 0;
+      }
+    }
+       
+    @keyframes backgroundScroll {
+      from {background-position: 0 0;}
+      to {background-position: -400px 0;}
+    }
+  }
+.director {
+  padding-bottom: 250px;
+}

@@ -1,0 +1,81 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/output.css">
+        <link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="screen" />
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/about.html">About the film</a>
+            </li>
+            <li>
+              <a class="playVideoButton" href="https://player.vimeo.com/video/149969967?autoplay=1">
+                <i class="fa fa-play playVideoButton"></i>Play trailer
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@sono.co.nz?Subject=Marathon%20Question%20from%20web" target="_top">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="home-hero">
+          <video autoplay poster="assets/images/marathon-back.jpg" id="bgvid">
+              <source src="assets/videos/marathon-back.mp4" type="video/mp4">
+          </video>
+          <div class="header-content">
+              <h1>MARATHON</h1>
+              <h2>A film by Sebastian Vidal Bustamante</h2>
+              <a target="_blank" href="http://sono.co.nz/marathon/">Do you want to help?</a>
+          </div>
+
+          <footer>
+              <a href="https://www.facebook.com/marathonfilmnz" target="_blank"><i class="fa fa-facebook-square"></i></a>
+              <a href="https://vimeo.com/sonohd" target="_blank"><i class="fa fa-vimeo-square"></i></a>
+              <a href="https://www.instagram.com/marathon_the_shortfilm" target="_blank"><i class="fa fa-instagram"></i></a>
+          </footer>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="js/vendor/fancybox/source/jquery.fancybox.pack.js" type="text/javascript"></script>
+        
+        <!-- Browserify from ./js/*.js -->
+        <script src="dist/main.js"></script>
+        
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-78620805-1','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
