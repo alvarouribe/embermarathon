@@ -11,5 +11,13 @@ export default Ember.Route.extend({
 		    'type': 'iframe'
 		    });
 		});
+	},
+	actions: 
+	{
+		error(error)
+		{
+			console.log('Index - error', error);
+      this.transitionTo('/');
+		}	
 	}
 });
