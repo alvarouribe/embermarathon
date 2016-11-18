@@ -74,7 +74,14 @@ video#bgvid {
   }
 }
 
-.playVideoButton{
+.playVideoButton {
+  position:relative;
+}
+
+.playVideoIcon {
+  position: absolute;
+  top: -2px;
+  left: -17px;
   color:white;
   cursor: pointer;
 }
